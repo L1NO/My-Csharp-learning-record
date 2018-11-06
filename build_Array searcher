@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ARRAYsearcher
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int index; string myobject; string[] word = new string[6] { "apple", "book", "cat", "dog", "egg", "fish" };
+            Array.Sort(word);
+            Console.WriteLine(" === Line Up (after) ===");
+            for(int k = 0;k<=5;k++)
+            {
+                Console.WriteLine("  {0}.word[{1}] = {2} ", k + 1, k, word[k]);
+            }
+            Console.WriteLine("-------------------------------------");
+            Console.Write("Which one would you want to know? ");
+            myobject = Console.ReadLine();
+            index = Array.BinarySearch(word, myobject);
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Result: ");
+            Console.WriteLine();
+            if(index<0)
+            {
+                Console.WriteLine("Error 404");
+            }
+            else
+            {
+                Console.WriteLine("Data is here. word[{0}] = {1}", index, word[index]);
+                Console.WriteLine("\n Number of {0} element", index + 1);
+            }
+            Console.Read();
+        }
+    }
+}
