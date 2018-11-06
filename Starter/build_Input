@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace YorN
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0, keyin = 0, sum = 0;
+            string str1;
+            do
+            {
+                Console.Write("  == Input a number: ");
+                keyin = Convert.ToInt32(Console.ReadLine());
+                sum += keyin;
+                count++;
+                Console.Write("  == continue? (Y/N) ");
+                str1 = Console.ReadLine();
+                if ((str1 == "y") || (str1 == "Y"))
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            } while (true);
+            Console.WriteLine("\n == How many numbers? {0} Total: {1}", count, sum);
+            Console.Read();
+        }
+    }
+}
