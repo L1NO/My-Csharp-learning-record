@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VC_Ch01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str1;
+            int price, qty;
+            Console.WriteLine();
+            Console.WriteLine(" A store ");
+            Console.WriteLine(" ===== ");
+            Console.Write("1. Name:");
+            str1 = Console.ReadLine(); // input name
+            Console.Write("2. Price:");
+            price = int.Parse(Console.ReadLine());
+            Console.Write("3. Number:");
+            qty = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" ===== ");
+            Console.WriteLine("4. Total: {0}", price * qty);
+            Console.Read();
+        }
+    }
+}
