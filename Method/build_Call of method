@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PGRM
+{
+    class Program
+    {
+        private static double PI = 3.1416;
+        static double Compute(double r)
+        {
+            return (4.0 / 3.0 * PI * r * r * r);
+        }
+        static void Main(string[] args)
+        {
+            double volume, radius;
+            Console.Write("Enter radius: ");
+            radius = double.Parse(Console.ReadLine());
+            volume = Compute(radius);
+            Console.WriteLine();
+            Console.WriteLine("radius = {0} cm volume = {1} cm^3", radius, volume);
+            Console.Read();
+        }
+    }
+}
