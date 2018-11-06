@@ -7,4 +7,4 @@ So just take it as you need.<p>
 
 Oh,btw namespace title maybe not same as what you wish to name when you creat your project. 
 
-# Life is boring and so hard. <sub>&mdash;</sub>(:з」∠)<sub>&mdash;</sub>
+# Life is boring and so hard. <sub>&ndash;</sub>(:з」∠)<sub>&ndash;</sub>
