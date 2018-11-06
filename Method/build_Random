@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RNDO
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rndObj = new Random();
+            // GP1 1~10 5 random
+            Console.Write("== GP1:");
+            for(int k=1;k<=5;k++)
+            {
+                Console.Write(" {0}", rndObj.Next(1, 11));
+            }
+            Console.WriteLine();
+            //GP2 1~10 5 random
+            Console.Write("== GP2:");
+            for(int k=1;k<=5;k++)
+            {
+                Console.Write(" {0}", rndObj.Next(1, 11));
+            }
+            Console.Read();
+        }
+    }
+}
