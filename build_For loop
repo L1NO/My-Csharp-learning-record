@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace for1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int k, count = 0;
+            for (k = 1; k <= 100; k++)
+            {
+                if((k%4) == 0)
+                {
+                    Console.Write("{0} ", k);
+                    count++;
+                    if (count == 10)
+                    {
+                        Console.WriteLine();
+                        count = 0;
+                    }
+                }
+            }
+            Console.Read();
+        }
+    }
+}
