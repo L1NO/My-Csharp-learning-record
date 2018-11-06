@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DatAbase
+{
+    class C1
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+        private int LV;
+        public int sLV
+        {
+            get
+            {
+                return LV;
+            }
+            set
+            {
+                if (value < 25)
+                    value = 25;
+                LV = value;
+                Console.WriteLine("== LV range result: {0}", LV);
+            }
+        }
+        public C1(string vID,string vName,int vLV)
+        {
+            ID = vID;
+            Name = vName;
+            sLV = vLV;
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine("ID: {0}", ID);
+            Console.WriteLine("Name: {0}", Name);
+            Console.WriteLine("LV: {0}", sLV);
+            Console.WriteLine("=================================");
+        }
+    }
+}
