@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DatAbase
+{
+    class C1
+    {
+        public string ID, Name;
+        public int LV;
+        public void ShowInfo()
+        {
+            Console.WriteLine("ID: {0}", ID);
+            Console.WriteLine("Name: {0}", Name);
+            Console.WriteLine("LV: {0}", LV);
+            Console.WriteLine("=================================");
+        }
+    }
+}
