@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MultiArrray
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, k; string[] name = new string[] { "A", "B", "C" }; int[] tot = new int[name.Length];
+            int[,] vote = new int[3, 3];
+            //
+            for(i=0;i<=2;i++)
+            {
+                Console.WriteLine("Area {0} vote rate: ", i + 1);
+                for(k=0;k<=2;k++)
+                {
+                    Console.Write(" {0}.{1} :", (k + 1), name[k]);
+                    vote[i, k] = int.Parse(Console.ReadLine());
+                }
+                Console.WriteLine("--------------------------------");
+            }            
+            //
+            for (i=0;i<=2;i++)
+            {
+                for(k=0;k<=2;k++)
+                {
+                    tot[i] += vote[k, i];
+                }
+            }
+            //
+            Console.WriteLine("==========================================");
+            Console.WriteLine(" Name  Area1    Area2    Area3    Total ");
+            Console.WriteLine("==========================================");
+            for(i=0;i<=2;i++)
+            {
+                Console.WriteLine("  {0}  {1}   {2}   {3}   {4} ", name[i], vote[0, i], vote[1, i], vote[2, i], tot[i]);
+            }
+            //
+            Array.Sort(tot, name);
+            Array.Reverse(tot);
+            Array.Reverse(name);
+            Console.WriteLine();
+            Console.WriteLine("=== {0} is winner, total: {1} votes", name[0], tot[0]);
+            Console.Read();
+        }
+      
+    }
+}
