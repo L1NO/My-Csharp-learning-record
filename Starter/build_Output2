@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace YEARR
+{
+    class Program
+    {
+        static void CheckYear(int y)
+        {
+            if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0)
+            {
+                Console.WriteLine("\n=== {0} is leap year.", y);
+            }
+            else
+            {
+                Console.WriteLine("\n=== {0} is non-leap year.", y);
+            }
+        }
+        static void Main(string[] args)
+        {
+            int year;
+            Console.Write("Enter the year: ");
+            try
+            {
+                year = int.Parse(Console.ReadLine());
+                CheckYear(year);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.Read();
+        }
+    }
+}
