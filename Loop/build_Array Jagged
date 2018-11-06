@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MultiArrray2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[][] stuary = new string[3][]; //Bulid 3 line
+            // line 0 stuary[0][0]~stuary[0][3]
+            stuary[0] = new string[] { "A", "knight", "DPS", "leader" };
+            // line 1 stuary[1][0]~stuary[1][4]
+            stuary[1] = new string[] { "B", "wizard", "DPS", "SUP", "sub-leader" };
+            // line 2 stuary[2][0]~stuary[2][1]
+            stuary[2] = new string[] { "C", "ranger", "DPS" };
+            // Get all stuary array
+            for(int i=0;i<=stuary.Length-1;i++)
+            {
+                Console.Write("Line {0}:", i);
+                for(int k=0;k<=stuary[i].Length-1;k++)
+                {
+                    Console.Write("{0} ", stuary[i][k]);
+                }
+                Console.WriteLine("\n");
+            }
+            Console.Read();
+        }
+    }
+}
