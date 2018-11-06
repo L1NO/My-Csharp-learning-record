@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DatAbase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            C1 person2 = new C1("B02", "Joe", 35);
+            person2.ShowInfo();
+            Console.Read();
+        }
+    }
+}
