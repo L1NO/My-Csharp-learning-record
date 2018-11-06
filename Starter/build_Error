@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testdebug
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, k, p; i = 5; k = 0;
+            try
+            {
+                p = i / k;
+            }
+            catch(DivideByZeroException ex)
+            {
+                Console.WriteLine("Error Message:{0}", ex.Message);
+                Console.WriteLine("Out of function:{0}", ex.StackTrace);
+                Console.WriteLine("Out of object:{0}", ex.Source);
+                Console.WriteLine("Out of type:{0}", ex.GetType());
+                Console.WriteLine("Out of string:{0}", ex.ToString());
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Out of rule.");
+            }
+            finally
+            {
+                Console.WriteLine("...End work...");
+            }
+            Console.Read();
+        }
+    }
+}
