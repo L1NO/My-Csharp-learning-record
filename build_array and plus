@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ARRRRRAY
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int k; int[] myAray = new int[5];
+            Console.WriteLine("=== Input 5 number to array: \n");
+            //
+            for(k=0;k<5;k++)
+            {
+                Console.Write("{0}. Array {1}: myAray[{2}] = ", k + 1, k + 1, k);
+                myAray[k] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine();
+            Console.WriteLine(" == myAry ==");
+            int sum = 0;
+            foreach(int item in myAray)
+            {
+                Console.Write("  " + item);
+                sum += item;
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine(" myAry total = {0}", sum);
+            Console.Read();
+        }
+    }
+}
