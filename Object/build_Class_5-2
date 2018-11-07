@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ObjSetValue
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Orb person1 = new Orb
+            {
+                ID = "A01",
+                Name = "John",
+                Role = "DPS",
+                Skill = "Smash",
+                sLV = 35
+            };
+            Orb person2 = new Orb
+            {
+                ID = "B01",
+                Name = "Joe",
+                Role = "SUP",
+                Skill = "Heal",
+                sLV = 19
+            };
+            person1.ShowInfo();
+            person2.ShowInfo();
+            Console.Read();
+        }
+    }
+}
