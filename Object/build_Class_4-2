@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DatAbase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            C1 anyone = new C1();
+            anyone.ShowInfo();
+            Console.WriteLine("System checking...");
+            anyone.ShowInfo("C01", "Jane", 25);
+            C1 person1 = new C1("A01", "John", 35);
+            person1.ShowInfo();
+            Console.Read();
+        }
+    }
+}
