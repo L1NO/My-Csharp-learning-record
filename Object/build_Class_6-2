@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StaticMembers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StateE person1 = new StateE("A01", "John", 35);
+            person1.ShowInfo();
+            StateE.ShowNum();
+            StateE person2 = new StateE();
+            person2.ShowInfo("B01", "Joe", 20);
+            Console.WriteLine("Now there are {0} members data.", StateE.Num);
+            Console.Read();
+        }
+    }
+}
