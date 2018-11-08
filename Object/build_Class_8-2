@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace InHerits
+{
+    class Treeangle : Rectabgle
+    {
+        public override int GetArea()
+        {
+            return (width * height) / 2;
+        }
+        public void ShowData()
+        {
+            Console.WriteLine("Treeangle's width = " + width + ", hight = " + height + ", area = " + GetArea());
+        }
+    }
+}
