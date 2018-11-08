@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OBJARY
+{
+    class OBA
+    {
+        private static int num;
+        public string ID { get; set; }
+        public string Name { get; set; }
+        private int LV;
+        public int sLV
+        {
+            get { return LV; }
+            set
+            {
+                if (value < 25)
+                    value = 25;
+                LV = value;
+            }
+        }
+        public static void ShowNum()
+        {
+            Console.WriteLine("Now there are {0} members data.\n", num);
+        }
+        public OBA()
+        {
+            num += 1;
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine("ID: {0}", ID);
+            Console.WriteLine("Name: {0}", Name);
+            Console.WriteLine("LV: {0}", sLV);
+            Console.WriteLine("===================================");
+        }
+    }
+}
