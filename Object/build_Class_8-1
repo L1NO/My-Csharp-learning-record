@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace InHerits
+{
+    class Rectabgle
+    {
+        protected static int num;
+        public int width { get; set; }
+        public int height { get; set; }
+        public Rectabgle()
+        {
+            num += 1;
+        }
+        public virtual int GetArea()
+        {
+            return width * height;
+        }
+        public static void ShowNum()
+        {
+            Console.WriteLine("Total {0} images", num);
+        }
+    }
+}
