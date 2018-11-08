@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OBJARY
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Enter the members' number you want to build: ");
+                int n = int.Parse(Console.ReadLine());
+                OBA[] per = new OBA[n];
+                for(int i = 0; i <= per.GetUpperBound(0); i++)
+                {
+                    per[i] = new OBA();
+                    Console.WriteLine("Please Enter Number " + (i + 1).ToString() + " member's data");
+
+                    Console.Write("ID: ");
+                    per[i].ID = Console.ReadLine();
+                    Console.Write("Name: ");
+                    per[i].Name = Console.ReadLine();
+                    Console.Write("LV: ");
+                    per[i].sLV = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("-------------------------------------------");
+                    Console.WriteLine("Show the number " + (i + 1).ToString() + "'s member data.");
+                    per[i].ShowInfo();
+                }
+                OBA.ShowNum();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error 404");
+            }
+            Console.Read();
+        }
+    }
+}
