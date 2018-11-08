@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace InHerits
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Rectabgle r = new Rectabgle { width = 10, height = 5 };
+            Console.WriteLine("Rectabgle's width = " + r.width + ", height = " + r.height + ", area = " + r.GetArea());
+            Console.WriteLine();
+            Treeangle t = new Treeangle { width = 10, height = 5 };
+            t.ShowData();
+            Console.WriteLine("=======================================");
+            Rectabgle.ShowNum();
+            Console.Read();
+        }
+    }
+}
