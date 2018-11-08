@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FIRSTform
+{
+    class MYform:Form
+    {
+        Button btnOK;
+        public MYform()
+        {
+            btnOK = new Button();
+            btnOK.Text = "OK";
+            btnOK.Width = 90;
+            btnOK.Height = 60;
+            btnOK.Visible = true;
+            btnOK.Left = 30;
+            btnOK.Top = 55;
+            this.Width = 320;
+            this.Height = 240;
+            this.Controls.Add(btnOK);
+            this.Text = "Your first windows.";
+            btnOK.Click += new EventHandler(Click_Event);
+        }
+        private void Click_Event(System.Object sender,System.EventArgs e)
+        {
+            MessageBox.Show("Hi there...\n Did someone call the doctor?");
+        }
+    }
+}
